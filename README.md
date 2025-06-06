@@ -1,6 +1,14 @@
 # Run with command
-As multiple python version have fucked up with each other and even setting path doesn't worked... 😭
+
 ```bash
+# Activate virenv and run script - 1 by 1 in PowerShell
+.\venv\Scripts\activate
+python generate_10.py
+
+# Run in Terminal
+venv\Scripts\activate && python generate_10.py
+
+# As multiple python version have fucked up with each other and even setting path doesn't worked... 😭
 C:\Users\tejas\AppData\Local\Programs\Python\Python312\python.exe generate_id_cards_and_receipts.py
 ```
 
@@ -30,7 +38,8 @@ myenv\Scripts\activate
 
 You’ll see `(myenv)` at the start of your command prompt, indicating the environment is active.
 
-> ## **Note:** ⚠️ 
+> ## **Note:** ⚠️
+>
 > You have to activate the environment everytime you want to run the project.
 
 ### 4. Install required Python libraries
@@ -48,12 +57,12 @@ pip install pandas pillow reportlab openpyxl gspread oauth2client
 ```
 
 - Why these packages?
-    - **pandas**: For reading Excel files.
-    - **pillow**: For image processing via PIL.
-    - **reportlab**: For PDF generation.
-    - **openpyxl**: Required by pandas to read .xlsx Excel files (if your students.xlsx is in .xlsx format).
-    - **gspread**: For interacting with Google Sheets, allowing you to read from or write to Google Sheets programmatically.
-    - **oauth2client**: For authentication with Google APIs, required by gspread to securely access Google Sheets.
+  - **pandas**: For reading Excel files.
+  - **pillow**: For image processing via PIL.
+  - **reportlab**: For PDF generation.
+  - **openpyxl**: Required by pandas to read .xlsx Excel files (if your students.xlsx is in .xlsx format).
+  - **gspread**: For interacting with Google Sheets, allowing you to read from or write to Google Sheets programmatically.
+  - **oauth2client**: For authentication with Google APIs, required by gspread to securely access Google Sheets.
 
 ### 5. Running Your Project
 
@@ -73,7 +82,6 @@ deactivate
 
 c:\Users\tejas\AppData\Local\Programs\cursor\resources\app\bin;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Users\tejas\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Program Files\dotnet\;C:\Program Files\Git\cmd;C:\Users\tejas\AppData\Local\jdk-11.0.2\bin;C:\Program Files\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\170\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\150\Tools\Binn\;C:\Program Files\Microsoft SQL Server\150\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\160\DTS\Binn\;C:\Program Files\Azure Data Studio\bin;C:\Program Files (x86)\LINQPad5;C:\Users\tejas\AppData\Local\jdk-11.0.2\bin;C:\Users\tejas\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\tejas\AppData\Local\Programs\Py;C:\Users\tejas\AppData\Local\Programs\Python\Python312\;C:\Users\tejas\AppData\Local\Programs\Python\Python313\Scripts\;C:\Users\tejas\AppData\Local\Programs\Python\Python313\;C:\Users\tejas\AppData\Local\jdk-11.0.2\bin;C:\Users\tejas\AppData\Local\Programs\Python\Python312\Scripts\;C:\Users\tejas\AppData\Local\Programs\Python\Python312\;C:\Users\tejas\AppData\Local\Microsoft\WindowsApps;C:\Users\tejas\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\tejas\AppData\Roaming\nvm;C:\Program Files\nodejs;C:\Users\tejas\AppData\Local\Android\Sdk\platform-tools;C:\Users\tejas\AppData\Local\Android\Sdk\emulator;C:\Users\tejas\AppData\Local\Android\Sdk\tools;C:\Users\tejas\AppData\Local\Android\Sdk\tools\bin;C:\Users\tejas\flutter\bin;C:\Program Files\MongoDB\Server\7.0\bin;C:\Users\tejas\AppData\Local\Pub\Cache\bin;C:\Users\tejas\.dotnet\tools;C:\Program Files\Azure Data Studio\bin;C:\Program Files\nuget_cli;C:\Users\tejas\AppData\Local\Google\Cloud SDK\google-cloud-sdk\bin
 
-
 # 🛠️ Python Setup ⚒️
 
 ## ❓Check if Python is Installed on Windows 🤔 ?
@@ -82,74 +90,81 @@ To verify if Python is installed on your Windows system and properly configured,
 
 - ### 1. Check via Command Prompt or PowerShell
 
-    - Open **Command Prompt** (type `cmd` in the Start menu) or **PowerShell**.
-    - Run one of these commands:
-        ```bash
-        python --version
-        ```
-        or
-        ```bash
-        python
-        ```
-        **Expected Output**:
-        - If Python is installed and added to your PATH, you’ll see the version (e.g., `Python 3.11.2`) or enter the Python interactive prompt.
-        - If you get an error like `'python' is not recognized...`, Python is either not installed or not added to your PATH.
+  - Open **Command Prompt** (type `cmd` in the Start menu) or **PowerShell**.
+  - Run one of these commands:
+    ```bash
+    python --version
+    ```
+    or
+    ```bash
+    python
+    ```
+    **Expected Output**:
+    - If Python is installed and added to your PATH, you’ll see the version (e.g., `Python 3.11.2`) or enter the Python interactive prompt.
+    - If you get an error like `'python' is not recognized...`, Python is either not installed or not added to your PATH.
 
 - ### 2. Check from the Start Menu
 
-    - Press the **Windows key** and type `python`.
-    - If Python is installed, it will appear as a best match. Right-click to see the file location.
+  - Press the **Windows key** and type `python`.
+  - If Python is installed, it will appear as a best match. Right-click to see the file location.
 
 ## 🛠️ Check Installation Location & Set PATH if needed ✅
 
 - ### 👉 Find where Python is installed ❓
-    - Open cmd by `🪟 + R` > type `cmd` > hit `Enter` 
-        ```bash
-        where python
-        ```
-        **Expected Output**:
-        - This displays the full path(s) to the Python executable(s)  
-        e.g., `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311\python.exe`.
-        - Alternatively,  
-        Check `Control Panel > Programs and Features` to see if Python is listed and view its installation path.
 
-        #### Example
-        ```bash
-          ## I've multiple versions installed so it shows multiple paths😊 
-          C:\Users\tejas>where python
-          C:\Users\tejas\AppData\Local\Programs\Python\Python312\python.exe
-          C:\Users\tejas\AppData\Local\Programs\Python\Python313\python.exe
-          C:\Users\tejas\AppData\Local\Microsoft\WindowsApps\python.exe
-          C:\Users\tejas>
-        ```
+  - Open cmd by `🪟 + R` > type `cmd` > hit `Enter`
+
+    ```bash
+    where python
+    ```
+
+    **Expected Output**:
+
+    - This displays the full path(s) to the Python executable(s)  
+      e.g., `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311\python.exe`.
+    - Alternatively,  
+      Check `Control Panel > Programs and Features` to see if Python is listed and view its installation path.
+
+    #### Example
+
+    ```bash
+      ## I've multiple versions installed so it shows multiple paths😊
+      C:\Users\tejas>where python
+      C:\Users\tejas\AppData\Local\Programs\Python\Python312\python.exe
+      C:\Users\tejas\AppData\Local\Programs\Python\Python313\python.exe
+      C:\Users\tejas\AppData\Local\Microsoft\WindowsApps\python.exe
+      C:\Users\tejas>
+    ```
 
 - ### 👉 Set Python Path in Environment Variables
-    - **Which Paths to Add?**:
-        1.  Main Python folder:  
-            `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311\`
 
-        2. Scripts folder:  (*contains `pip` and other utilities* )  
-            `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311\Scripts\` 
+  - **Which Paths to Add?**:
 
-        - For system-wide installations:
-          ```bash
-          C:\Program Files\Python311\
-          C:\Program Files\Python311\Scripts\
-          ```
-            Add these paths to the PATH environment variable, separated by semicolons.
+    1.  Main Python folder:  
+        `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311\`
+
+    2.  Scripts folder: (_contains `pip` and other utilities_ )  
+        `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python311\Scripts\`
+
+    - For system-wide installations:
+      ```bash
+      C:\Program Files\Python311\
+      C:\Program Files\Python311\Scripts\
+      ```
+      Add these paths to the PATH environment variable, separated by semicolons.
 
 ## 📍Python Dependencies Installation Location on Windows 🪟
 
 - ### How to Find the Exact Location
 
-    - **For global or virtual environment packages**:  
-        ```bash
-        python -m site
-        ```
-    - **For user-specific packages**:  
-        ```bash
-        python -m site --user-site
-        ```
+  - **For global or virtual environment packages**:
+    ```bash
+    python -m site
+    ```
+  - **For user-specific packages**:
+    ```bash
+    python -m site --user-site
+    ```
 
 This shows the default locations unless you've customized your Python or pip setup.
 
@@ -157,22 +172,22 @@ This shows the default locations unless you've customized your Python or pip set
 
 - ### 1. Global Installations
 
-    - **Default Python Installation**:
-      - `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python<version>`
-      - `C:\Program Files\Python<version>`
-    - **Packages Location** (when using `pip install <package>`):
-      - `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python<version>\Lib\site-packages`
-      - `C:\Program Files\Python<version>\Lib\site-packages`
+  - **Default Python Installation**:
+    - `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python<version>`
+    - `C:\Program Files\Python<version>`
+  - **Packages Location** (when using `pip install <package>`):
+    - `C:\Users\<YourUsername>\AppData\Local\Programs\Python\Python<version>\Lib\site-packages`
+    - `C:\Program Files\Python<version>\Lib\site-packages`
 
 - ### 2. User-Specific Installations
 
-    - **Packages Location** (when using `pip install --user <package>`):
-      - `C:\Users\<YourUsername>\AppData\Roaming\Python\Python<version>\site-packages`
+  - **Packages Location** (when using `pip install --user <package>`):
+    - `C:\Users\<YourUsername>\AppData\Roaming\Python\Python<version>\site-packages`
 
 - ### 3. Virtual Environments
 
-    - **Packages Location**:
-      - `<your-venv-folder>\Lib\site-packages`
+  - **Packages Location**:
+    - `<your-venv-folder>\Lib\site-packages`
 
 ---
 
@@ -192,6 +207,7 @@ This shows the default locations unless you've customized your Python or pip set
 ---
 
 ## Git Things 🌿
+
 ```bash
 # Original URL
 https://github.com/tejaspatel-jt/Garba-Class
