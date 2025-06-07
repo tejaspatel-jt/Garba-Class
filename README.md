@@ -3,16 +3,42 @@
 ```bash
 # Activate virenv and run script - 1 by 1 in PowerShell
 .\venv\Scripts\activate
-python generate_10.py
+python generate_11.py
 
 # Run in Terminal
-venv\Scripts\activate && python generate_10.py
+venv\Scripts\activate && python generate_11.py
 
 # As multiple python version have fucked up with each other and even setting path doesn't worked... 😭
 C:\Users\tejas\AppData\Local\Programs\Python\Python312\python.exe generate_id_cards_and_receipts.py
 ```
 
-# Setup
+# 🤩 Steps to Create and Share the `.exe` 🚀
+
+### 1. Navigate to Project Folder
+```bash
+cd C:\Projects\PYTHON\Garba Class
+```
+
+### 2. Run pyinstaller command
+
+```bash
+pyinstaller --onefile --console generate_11.py
+```
+  - `--onefile`: Creates a single `.exe`.
+  - `--console`: Keeps the console open to show print statements and errors.
+  - No `--add-data` flag as `input_data` and arial.ttf are placed by the vendor in same folder.
+
+#### Please take a note that running this command will generate 2 new folders and 1 file at project folder.
+  1. File `generate_11.spec`
+  2. Folders
+      - build
+      - dist
+
+The `.exe` file will be in generated at `PROJECT_FOLDER\dist\generate_11.exe`.
+
+---
+
+# Project Setup
 
 ### 1. Open CMD and Navigate to your project folder
 

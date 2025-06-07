@@ -1,5 +1,9 @@
 # Timeline
 
+### 7_jun_2025_1024pm - 3 hrs
+- installed `pyinstaller` and created `.exe` file from final working copy `generate_11.py`.
+    - It's tested and working fine.
+
 ### 7_jun_2025_433am - 7 hrs
 
 - ✅ TEXT IS VISIBLE now in BBF - Big Black Font 😜

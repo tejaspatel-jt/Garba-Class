@@ -2,3 +2,4 @@ pandas
 pillow
 reportlab
 openpyxl
+pyinstaller
