@@ -1,5 +1,11 @@
 # Timeline
 
+### 19_jun_2025_651pm - 1 hrs
+- new file `send_msg_on_whatsapp.py` added which sends messages on whatsapp to contacts from `contacts.csv` file using `https://web.whatsapp.com/`
+    - It requires below 2 packages
+        - pandas
+        - selenium
+
 ### 7_jun_2025_1024pm - 3 hrs
 - installed `pyinstaller` and created `.exe` file from final working copy `generate_11.py`.
     - It's tested and working fine.

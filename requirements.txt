@@ -3,3 +3,4 @@ pillow
 reportlab
 openpyxl
 pyinstaller
+selenium
