@@ -1,5 +1,14 @@
 # Timeline
 
+### 21_jun_2025_203am - 4 hrs
+- `generate_12.py` file created for demo purpose.
+    - below 2 functions commented out for unnessary overload
+        - `generate_receipt`
+        - `generate_receipt_from_image`
+- Dummy data is also added
+- fonts also added
+- Perfect ID card with some good data and photo is being generated
+
 ### 19_jun_2025_651pm - 1 hrs
 - new file `send_msg_on_whatsapp.py` added which sends messages on whatsapp to contacts from `contacts.csv` file using `https://web.whatsapp.com/`
     - It requires below 2 packages
